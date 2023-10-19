@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#18176b">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="images/iconos/peli32.png">
+    <title>App Cine</title>
+</head>
+<body>
+    <h1 style="color: white;">PELICULAS</h1>
+    <section class="container">
+        <label for="">Nombre de Usuario:</label>
+        <input type="text" name="username" id="username"><br>
+
+        <label for="correo">Correo:</label>
+        <input type="email" name="correo" id="correo"><br>
+
+        <label for="peliculas">Nombre de pelicula:</label>
+        <select name="peliculas" id="peliculas" style="width: auto;">
+            <option value="default" selected>Selecciona una pelicula</option>
+            <option value="Avengers Endgame">Avengers Endgame</option>
+            <option value="Up">Up</option>
+            <option value="The Shining">The Shining</option>
+            <option value="Quien soy yo">Quien soy yo?</option>
+            <option value="Ready Player One">Ready Player One</option>
+            <option value="Pesadilla en Elm Street 5">Pesadilla en Elm Street 5</option>
+        </select><br><br>
+
+        <img src="images/default.png" alt="" id="peliposter"><br><br>
+
+        <label for="boletos">Boletos</label>
+        <input type="text" id="boletos"><br><br>
+        <center>
+            <input type="submit" value="Guardar" id="BotonGuardar" onclick="addNewItemToTable()">
+            <input type="submit" value="Limpiar" id="BotonLimpiar" onclick="clearinputs()">
+            <input type="submit" value="Guardar Cambios" id="EdicionBoton" style="display: none;">
+        </center>
+    </section>
+
+    <section class="container-table">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>
+                    <th>Pelicula(Nombre)</th>
+                    <th>Pelicula(Imagen)</th>
+                    <th>Numero de Boletos</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Agrega filas de datos aquí -->
+            </tbody>
+        </table>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

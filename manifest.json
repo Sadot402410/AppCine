@@ -1,0 +1,46 @@
+{
+    "short_name": "Cine",
+    "name": "App de Peliculas",
+    "start_url":"index.html",
+    "background_color": "#18176b",
+    "theme_color": "#18176b",
+    "display": "standalone",
+    "orientation":"portrait",
+    "icons":[
+        {
+            "src":"images/iconos/peli32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src":"images/iconos/peli48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src":"images/iconos/peli64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src":"images/iconos/peli72.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src":"images/iconos/peli96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src":"images/iconos/peli128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src":"images/iconos/peli256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ]
+}
