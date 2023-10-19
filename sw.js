@@ -4,50 +4,25 @@ self.addEventListener('install', e => {
         cache.add('/'), //buena practica
             cache.add('index.html'),
             cache.add('app.js'),
-            cache.add('styles.css')
+            cache.add('styles.css'),
+            cache.add('manifest.json')
     })
 
     const imagenes = caches.open('BovedaImagenes').then(cache => {
         cache.add('/'), //buena practica
             cache.add('images/default.png'),
-            cache.add('images/peli1.jpg'),
-            cache.add('images/peli2.jpg'),
-            cache.add('images/peli3.jpg'),
-            cache.add('images/peli4.jpg'),
-            cache.add('images/peli5.jpg'),
-            cache.add('images/peli6.jpg'); 
+            cache.add('images/Avengers Endgame.jpg'),
+            cache.add('images/Up.jpg'),
+            cache.add('images/The Shining.jpg'),
+            cache.add('images/Ready Player.jpg'),
+            cache.add('images/Quien soy yo.jpg'),
+            cache.add('images/Pesadilla en Elm Street 5.jpg'); 
 
     })
     e.waitUntil(recursos, imagenes);
 });
 
-
 self.addEventListener('fetch', e => {
-// const resp = caches.match(e.request).then(res => {
-    //     if (res) return res;
-    //     console.log('no existe el recurso en cache ->', e.request.url);
-
-    //     return fetch(e.request).then(newResp => {
-        //         caches.open('BovedaRecursos').then(cache => {
-    //             cache.put(e.request, newResp)
-    //         });
-    //         return newResp.clone();
-    //     });
-    // });
-
-    // const resp2 = caches.match(e.request).then(res2 => {
-    //     if (res2) return res2;
-    //     console.log('no existe el recurso en cache ->', e.request.url);
-    
-    //     return fetch(e.request).then(newResp => {
-        //         caches.open('BovedaImagenes').then(cache => {
-            //             cache.put(e.request, newResp)
-            //         });
-            //         return newResp.clone();
-            //     });
-            // });
-            
-            // e.respondWith(resp, resp2)
     const resp = fetch(e.request).then(newResp => { 
         caches.open('BovedaImagenes').then(cache => {
             cache.put(e.request, newResp)
